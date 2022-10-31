@@ -66,3 +66,123 @@ blockquote {
 	- https://www.smashingmagazine.com/2017/04/start-using-css-custom-properties/
 */
 
+.blog {
+	display: grid;
+	gap: 0 40px;
+	grid-template-columns:  1fr  4fr 2fr;
+}
+
+figure,
+blockquote {
+	grid-column: 1 / span 3;
+	margin: 0;
+}
+
+header,
+h2,
+p, 
+footer {
+	grid-column: 2;
+}
+
+
+/* --- Nadpisy stylování--- */
+h1 {
+	font-size: 90px;
+	margin-top: 0;
+}
+
+h2{
+	font-size: 60px;
+	margin: 20px 0;
+}
+
+h1,
+h2 {
+	color: var(--zelena);
+}
+
+.meta {
+	color: var(--seda);
+	margin-top: 50px;
+}
+
+p {
+	margin-top: 0;
+}
+
+/* --- Citáty --- */
+
+blockquote {
+	text-align: center;
+	color: var(--seda);
+	font-size:36px;
+}
+
+blockquote::before,
+blockquote::after {
+	content: "";
+	display: block;
+	width: 110px;
+	height: 2px;
+	background-color: var(--limetka);
+	margin: 20px auto 20px auto;
+}
+
+/* --- Postranní .tip --- */
+.tip {
+	background-color: var(--svetla);
+	color: var(--tmava);
+	padding: 18px;
+	font-size: 14px;
+	align-self: start;
+}
+
+.tip a {
+	color: var(--oranzova);
+}
+
+.tip p {
+	margin: 0;
+}
+
+.tip-vlevo img {
+	max-width: 100%;
+}
+.tip-vlevo {
+	grid-column: 1;
+	text-align: right;
+	border-right: 2px solid var(--zluta);
+}
+
+.tip-vpravo {
+	grid-column: 3;
+	border-left: 2px solid var(--zluta);
+}
+
+/* --- obrazky + popis --- */
+
+figure img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+figure {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+figcaption {
+	color: var(--seda);
+}
+
+/*--- footer --- */
+
+footer,
+footer a {
+	color: var(--seda);
+}
+
+footer {
+	margin: 40px 0 0 0;
+}
